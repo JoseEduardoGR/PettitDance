@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Pettitt Dance · Escuela de Ballet</title>
+<meta name="description" content="Pettitt Dance, escuela de ballet dirigida por Vania Elizabeth Mena Piña. Clases de ballet para niñas, jóvenes y adultas. Agenda tu clase de prueba.">
+
+<!-- EDITAR: reemplazar por la URL real del sitio -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Pettitt Dance · Escuela de Ballet">
+<meta property="og:description" content="Clases de ballet para todas las edades. Disciplina, arte y elegancia en cada paso.">
+<meta property="og:image" content="assets/generated/og-image.png">
+
+<link rel="icon" type="image/png" href="assets/generated/favicon-icon.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,500&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500&family=Playball&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<!-- Preloader -->
+<div class="preloader" id="preloader" aria-hidden="true">
+  <div class="preloader__floor"></div>
+  <img src="assets/generated/silhouette-grandjete.png" alt="" class="preloader__dancer">
+  <span class="preloader__mark-text">Pettitt Dance</span>
+</div>
+
+<!-- Cursor accent (desktop) -->
+<div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
+
+<!-- Header -->
+<header class="site-header" id="siteHeader">
+  <div class="site-header__inner">
+    <a href="#hero" class="brand">
+      <img src="assets/images/logo-horizontal.png" alt="Pettitt Dance" class="brand__logo">
+    </a>
+
+    <nav class="main-nav" id="mainNav" aria-label="Navegación principal">
+      <ul class="main-nav__list">
+        <li><a href="#escuela" class="main-nav__link" data-nav-link>La escuela</a></li>
+        <li><a href="#vania" class="main-nav__link" data-nav-link>Vania Mena</a></li>
+        <li><a href="#diferenciales" class="main-nav__link" data-nav-link>Diferenciales</a></li>
+        <li><a href="#clases" class="main-nav__link" data-nav-link>Clases</a></li>
+        <li><a href="#galeria" class="main-nav__link" data-nav-link>Ambiente</a></li>
+        <li><a href="#momentos" class="main-nav__link" data-nav-link>Momentos</a></li>
+        <li><a href="#testimonios" class="main-nav__link" data-nav-link>Testimonios</a></li>
+        <li><a href="#contacto" class="main-nav__link main-nav__link--cta" data-nav-link>Agenda tu clase</a></li>
+      </ul>
+    </nav>
+
+    <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="mainNav">
+      <span class="nav-toggle__bar"></span>
+      <span class="nav-toggle__bar"></span>
+      <span class="nav-toggle__bar"></span>
+    </button>
+  </div>
+</header>
+
+<!-- Side section-progress nav (desktop) -->
+<nav class="side-dots" aria-label="Progreso de sección">
+  <a href="#hero" data-dot data-dot-for="hero" aria-label="Inicio"><span></span></a>
+  <a href="#escuela" data-dot data-dot-for="escuela" aria-label="La escuela"><span></span></a>
+  <a href="#vania" data-dot data-dot-for="vania" aria-label="Vania Mena"><span></span></a>
+  <a href="#diferenciales" data-dot data-dot-for="diferenciales" aria-label="Diferenciales"><span></span></a>
+  <a href="#clases" data-dot data-dot-for="clases" aria-label="Clases"><span></span></a>
+  <a href="#galeria" data-dot data-dot-for="galeria" aria-label="Ambiente"><span></span></a>
+  <a href="#momentos" data-dot data-dot-for="momentos" aria-label="Momentos"><span></span></a>
+  <a href="#testimonios" data-dot data-dot-for="testimonios" aria-label="Testimonios"><span></span></a>
+  <a href="#contacto" data-dot data-dot-for="contacto" aria-label="Contacto"><span></span></a>
+</nav>
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero__bg" style="background-image:url('assets/generated/hero-bg.jpg')"></div>
+    <div class="hero__gradient"></div>
+
+    <div class="hero__floaters" aria-hidden="true">
+      <img src="assets/generated/silhouette-arabesque.png" alt="" class="floater floater--1" data-parallax="0.15">
+      <img src="assets/generated/silhouette-pirouette.png" alt="" class="floater floater--2" data-parallax="0.3">
+    </div>
+
+    <div class="hero__content">
+      <p class="hero__eyebrow" data-reveal>Escuela de Ballet</p>
+      <h1 class="hero__title" data-reveal>
+        <span class="hero__title-line">Cada paso,</span>
+        <span class="hero__title-line hero__title-line--script">una historia</span>
+      </h1>
+      <p class="hero__subtitle" data-reveal>
+        <!-- EDITAR: ajustar tagline definitivo -->
+        Formación en ballet clásico para niñas, jóvenes y adultas, bajo la dirección de
+        <strong>Vania Elizabeth Mena Piña</strong>.
+      </p>
+      <div class="hero__actions" data-reveal>
+        <a href="#contacto" class="btn btn--primary">Agenda tu clase de prueba</a>
+        <a href="#escuela" class="btn btn--ghost">Conoce la escuela</a>
+      </div>
+    </div>
+
+    <a href="#escuela" class="scroll-cue" aria-label="Ir a la siguiente sección">
+      <span class="scroll-cue__line"></span>
+      <span class="scroll-cue__text">Descubre más</span>
+    </a>
+  </section>
+
+  <!-- BIENVENIDA / FILOSOFÍA -->
+  <section class="welcome" id="escuela">
+    <div class="welcome__bg" style="background-image:url('assets/generated/texture-tulle.jpg')" aria-hidden="true"></div>
+    <div class="welcome__decor" aria-hidden="true">
+      <img src="assets/generated/silhouette-releve.png" alt="" class="welcome__silhouette">
+    </div>
+    <div class="container welcome__grid">
+      <p class="section-eyebrow" data-reveal>Bienvenida</p>
+      <h2 class="section-title" data-reveal>
+        Un espacio para <span class="script-accent">crecer</span>, disciplinar el cuerpo
+        y enamorarse del arte del ballet.
+      </h2>
+      <!-- EDITAR: texto de filosofía real de la escuela -->
+      <p class="welcome__text" data-reveal>
+        En Pettitt Dance creemos que el ballet transforma. Cada clase combina técnica clásica,
+        expresión artística y disciplina, en un ambiente cálido donde cada alumna avanza a su
+        propio ritmo. Nuestro objetivo es formar bailarinas seguras de sí mismas, dentro y
+        fuera del salón de ballet.
+      </p>
+
+      <div class="stat-row" data-reveal>
+        <div class="stat">
+          <img src="assets/generated/icon-experience.png" alt="" class="stat__icon" loading="lazy">
+          <span class="stat__number" data-count-to="3">0</span><span class="stat__suffix">+</span>
+          <span class="stat__label">Años de experiencia</span>
+        </div>
+        <div class="stat">
+          <img src="assets/generated/icon-graduates.png" alt="" class="stat__icon" loading="lazy">
+          <span class="stat__number" data-count-to="100">0</span><span class="stat__suffix">+</span>
+          <span class="stat__label">Alumnas formadas</span>
+        </div>
+        <div class="stat">
+          <img src="assets/generated/icon-levels.png" alt="" class="stat__icon" loading="lazy">
+          <span class="stat__number" data-count-to="4">0</span><span class="stat__suffix">+</span>
+          <span class="stat__label">Niveles de formación</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOBRE VANIA -->
+  <section class="founder" id="vania">
+    <div class="founder__backdrop" aria-hidden="true"></div>
+    <div class="container founder__grid">
+      <div class="founder__portrait" data-pin-target>
+        <img src="assets/generated/ornate-frame.png" alt="" class="founder__frame" aria-hidden="true">
+        <div class="founder__photo-slot">
+          <!-- EDITAR: reemplazar por foto real de Vania Elizabeth Mena Piña -->
+          <span class="founder__photo-placeholder">Foto de Vania<br>próximamente</span>
+        </div>
+      </div>
+
+      <div class="founder__content">
+        <p class="section-eyebrow" data-reveal>La directora</p>
+        <h2 class="section-title" data-reveal>Vania Elizabeth <span class="script-accent">Mena Piña</span></h2>
+        <!-- EDITAR: biografía real -->
+        <p class="founder__text" data-reveal>
+          Fundadora y directora de Pettitt Dance. Formada en ballet clásico, Vania ha dedicado
+          su carrera a la enseñanza de la danza, combinando rigor técnico con una pedagogía
+          cercana y motivadora para alumnas de todas las edades.
+        </p>
+        <p class="founder__text" data-reveal>
+          Su propósito es que cada estudiante descubra en el ballet una herramienta de
+          disciplina, expresión y confianza, sin perder nunca el amor por el arte.
+        </p>
+        <blockquote class="founder__quote" data-reveal>
+          “El ballet no solo forma bailarinas, forma personas.”
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <!-- DIFERENCIALES — Bento Grid -->
+  <section class="bento" id="diferenciales">
+    <div class="container">
+      <p class="section-eyebrow" data-reveal>Nuestra propuesta</p>
+      <h2 class="section-title" data-reveal>Por qué elegir <span class="script-accent">Pettitt Dance</span></h2>
+    </div>
+
+    <div class="container bento__grid">
+      <article class="bento__item bento__item--a" data-reveal-stagger>
+        <p class="bento__title">Técnica clásica, calidez humana</p>
+        <p class="bento__text">Cada clase combina disciplina, arte y contención emocional para que cada alumna florezca a su propio ritmo, dentro y fuera del salón.</p>
+      </article>
+
+      <article class="bento__item bento__item--b" data-reveal-stagger>
+        <p class="bento__title">Grupos reducidos</p>
+        <p class="bento__text">Pocas alumnas por grupo para una atención verdaderamente personalizada en cada nivel.</p>
+      </article>
+
+      <article class="bento__item bento__item--c" data-reveal-stagger>
+        <p class="bento__title">Docentes certificadas</p>
+        <p class="bento__text">Formación pedagógica y técnica avalada, actualizada constantemente.</p>
+      </article>
+
+      <article class="bento__item bento__item--d" data-reveal-stagger>
+        <p class="bento__title">Preparación a exámenes</p>
+        <p class="bento__text">Acompañamiento para certificaciones y evaluaciones de nivel.</p>
+      </article>
+
+      <article class="bento__item bento__item--e" data-reveal-stagger>
+        <p class="bento__title">Presentaciones anuales</p>
+        <p class="bento__text">Muestras y funciones donde cada alumna sube al escenario.</p>
+      </article>
+
+      <article class="bento__item bento__item--f" data-reveal-stagger>
+        <p class="bento__title">Ambiente familiar</p>
+        <p class="bento__text">Un espacio cálido donde alumnas y familias se sienten en casa desde el primer día.</p>
+      </article>
+
+      <article class="bento__item bento__item--g" data-reveal-stagger>
+        <p class="bento__title">Horarios flexibles</p>
+        <p class="bento__text">Turnos mañana y tarde para adaptarnos a tu rutina.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- CLASES — showcase horizontal tipo "line-up" -->
+  <section class="programs" id="clases">
+    <div class="container programs__head">
+      <p class="section-eyebrow" data-reveal>Programas</p>
+      <h2 class="section-title" data-reveal>Clases para cada <span class="script-accent">etapa</span></h2>
+      <p class="programs__hint" data-reveal>Desliza para explorar todos los niveles →</p>
+    </div>
+
+    <div class="showcase" id="programsShowcase">
+      <!-- EDITAR: edades y horarios reales de cada nivel -->
+      <article class="showcase__card" data-reveal-stagger>
+        <div class="showcase__watermark" style="background-image:url('assets/generated/silhouette-arabesque.png')" aria-hidden="true"></div>
+        <span class="showcase__index">01</span>
+        <h3 class="showcase__title">Baby Ballet</h3>
+        <p class="showcase__desc">Primer acercamiento a la danza a través del juego, el ritmo y la coordinación.</p>
+      </article>
+      <article class="showcase__card" data-reveal-stagger>
+        <div class="showcase__watermark" style="background-image:url('assets/generated/silhouette-pirouette.png')" aria-hidden="true"></div>
+        <span class="showcase__index">02</span>
+        <h3 class="showcase__title">Ballet Inicial</h3>
+        <p class="showcase__desc">Fundamentos de la técnica clásica: postura, barra, centro y vocabulario del ballet.</p>
+      </article>
+      <article class="showcase__card" data-reveal-stagger>
+        <div class="showcase__watermark" style="background-image:url('assets/generated/silhouette-releve.png')" aria-hidden="true"></div>
+        <span class="showcase__index">03</span>
+        <h3 class="showcase__title">Pre Puntas</h3>
+        <p class="showcase__desc">Fortalecimiento técnico y preparación física previa al trabajo en zapatillas de punta.</p>
+      </article>
+      <article class="showcase__card" data-reveal-stagger>
+        <div class="showcase__watermark" style="background-image:url('assets/generated/silhouette-arabesque.png')" aria-hidden="true"></div>
+        <span class="showcase__index">04</span>
+        <h3 class="showcase__title">Ballet a Nivel Profesional</h3>
+        <p class="showcase__desc">Formación avanzada orientada a exámenes, montajes y una posible carrera en la danza.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- AMBIENTE — panel cinemático a pantalla completa -->
+  <section class="showcase-banner" id="galeria">
+    <div class="showcase-banner__bg" style="background-image:url('assets/generated/og-image.png')"></div>
+    <div class="showcase-banner__gradient"></div>
+    <div class="container showcase-banner__content">
+      <p class="section-eyebrow section-eyebrow--light" data-reveal>Ambiente</p>
+      <h2 class="showcase-banner__title" data-reveal>El <span class="script-accent">arte</span> se respira en cada clase</h2>
+      <p class="showcase-banner__text" data-reveal>
+        Tul, disciplina y luz de escenario: el ambiente de Pettitt Dance está pensado para
+        que cada alumna se sienta parte de algo más grande que una clase.
+      </p>
+    </div>
+  </section>
+
+  <!-- MOMENTOS — fotos reales con efecto 3D / parallax -->
+  <section class="moments" id="momentos">
+    <div class="container">
+      <p class="section-eyebrow" data-reveal>Momentos</p>
+      <h2 class="section-title" data-reveal>Nuestras alumnas <span class="script-accent">en escena</span></h2>
+    </div>
+
+    <div class="moments__grid">
+      <div class="moment moment--frame" data-moment style="--rot:-3deg">
+        <img src="assets/images/photo-alumna-attitude.jpg" alt="Alumna de Pettitt Dance en posición de attitude" class="moment__photo" data-moment-layer loading="lazy">
+        <p class="moment__caption">Técnica y expresión</p>
+      </div>
+
+      <div class="moment moment--frame moment--tall" data-moment style="--rot:-2.5deg">
+        <img src="assets/images/photo-grupo-escuela.jpg" alt="Alumnas y alumno de Pettitt Dance junto a su instructora" class="moment__photo" data-moment-layer loading="lazy">
+        <p class="moment__caption">Una gran familia</p>
+      </div>
+
+      <div class="moment moment--frame" data-moment style="--rot:2deg">
+        <img src="assets/images/photo-alumna-bn.jpg" alt="Alumna de Pettitt Dance, retrato en blanco y negro" class="moment__photo moment__photo--mono" data-moment-layer loading="lazy">
+        <p class="moment__caption">Disciplina y arte</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIOS -->
+  <section class="testimonials" id="testimonios">
+    <div class="container">
+      <p class="section-eyebrow" data-reveal>Testimonios</p>
+      <h2 class="section-title" data-reveal>Historias que <span class="script-accent">inspiran</span></h2>
+
+      <div class="testimonial-slider" data-reveal>
+        <!-- EDITAR: testimonios reales de alumnas/madres de familia -->
+        <div class="testimonial" data-slide>
+          <p class="testimonial__quote">“Mi hija encontró en Pettitt Dance no solo técnica, sino confianza en sí misma.”</p>
+          <p class="testimonial__author">— Madre de alumna, nivel infantil</p>
+        </div>
+        <div class="testimonial" data-slide>
+          <p class="testimonial__quote">“Empecé de adulta sin experiencia y el ambiente fue siempre cálido y profesional.”</p>
+          <p class="testimonial__author">— Alumna, nivel adultas</p>
+        </div>
+        <div class="testimonial" data-slide>
+          <p class="testimonial__quote">“La preparación técnica me permitió avanzar con seguridad a puntas.”</p>
+          <p class="testimonial__author">— Alumna, nivel avanzado</p>
+        </div>
+      </div>
+
+      <div class="testimonial-dots" id="testimonialDots"></div>
+    </div>
+  </section>
+
+  <!-- CTA / CONTACTO -->
+  <section class="cta" id="contacto">
+    <div class="container cta__inner">
+      <p class="section-eyebrow section-eyebrow--light" data-reveal>Inscripciones abiertas</p>
+      <h2 class="cta__title" data-reveal>Tu primera clase de <span class="script-accent">ballet</span> te espera</h2>
+      <p class="cta__text" data-reveal>
+        <!-- EDITAR: datos reales de contacto -->
+        Escríbenos y agenda una clase de prueba. Cupos limitados por grupo.
+      </p>
+
+      <div class="cta__actions" data-reveal>
+        <a href="https://wa.me/50000000000" class="btn btn--primary" target="_blank" rel="noopener">
+          Escribir por WhatsApp
+        </a>
+        <a href="mailto:contacto@pettittdance.com" class="btn btn--ghost btn--ghost-light">
+          contacto@pettittdance.com
+        </a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="site-footer__glow" aria-hidden="true"></div>
+
+  <div class="container site-footer__top">
+    <div class="site-footer__brand">
+      <img src="assets/images/logo-horizontal.png" alt="Pettitt Dance" class="site-footer__logo">
+      <p class="site-footer__tagline">Escuela de ballet dirigida por Vania Elizabeth Mena Piña.</p>
+      <div class="site-footer__social">
+        <a href="https://wa.me/50000000000" target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6.6 17.4 4 20l2.7-.7a8 8 0 1 0-3.1-3.3"/><path d="M9 9.9c0 3 2.6 5.5 5.5 5.5.6 0 1-.5.9-1.1l-.2-1a.9.9 0 0 0-.7-.6l-1.2-.3a.9.9 0 0 0-.9.2l-.3.4a5 5 0 0 1-2.2-2.3l.3-.3a.9.9 0 0 0 .3-.9L10.2 8.5a.9.9 0 0 0-.7-.6l-1-.2c-.6-.1-1.1.3-1.1.9v1.4Z"/></svg>
+        </a>
+        <a href="mailto:contacto@pettittdance.com" aria-label="Escríbenos por correo">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="5.5" width="17" height="13" rx="2.5"/><path d="m4.5 7 7.5 6 7.5-6"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="site-footer__col">
+      <p class="site-footer__heading">Explorar</p>
+      <nav class="site-footer__nav" aria-label="Enlaces del pie de página">
+        <a href="#escuela">La escuela</a>
+        <a href="#diferenciales">Diferenciales</a>
+        <a href="#clases">Clases</a>
+        <a href="#momentos">Momentos</a>
+      </nav>
+    </div>
+
+    <div class="site-footer__col">
+      <p class="site-footer__heading">Contacto</p>
+      <a href="mailto:contacto@pettittdance.com" class="site-footer__contact-link">contacto@pettittdance.com</a>
+      <p class="site-footer__address"><!-- EDITAR: dirección real --> Quma, Hidalgo</p>
+      <a href="#contacto" class="btn btn--primary btn--sm">Agenda tu clase</a>
+    </div>
+  </div>
+
+  <div class="container site-footer__bottom">
+    <p>&copy; <span id="year"></span> Pettitt Dance — Vania Elizabeth Mena Piña.</p>
+    <p class="site-footer__credit">Desarrollado por <strong>GRcode</strong></p>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
