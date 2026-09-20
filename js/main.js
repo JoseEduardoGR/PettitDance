@@ -245,20 +245,67 @@
   }
 
   /* ============================================
-     Programs showcase: vertical wheel -> horizontal scroll (desktop)
+     Programs showcase: never hijacks the page scroll — the mouse
+     wheel always scrolls the page. Horizontal navigation instead
+     comes from: trackpad/touch swipe (native), mouse click-drag,
+     and an auto-scroll hint after 3s of idle hover.
      ============================================ */
   const showcase = document.getElementById('programsShowcase');
-  if (showcase && window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
-    showcase.addEventListener('wheel', (e) => {
-      const atStart = showcase.scrollLeft <= 0;
-      const atEnd = showcase.scrollLeft + showcase.clientWidth >= showcase.scrollWidth - 1;
-      const scrollingHorizontallyOnly = Math.abs(e.deltaX) > Math.abs(e.deltaY);
-      if (scrollingHorizontallyOnly) return;
-      if ((atStart && e.deltaY < 0) || (atEnd && e.deltaY > 0)) return;
-      e.preventDefault();
-      e.stopPropagation();
-      showcase.scrollLeft += e.deltaY;
-    }, { passive: false });
+  if (showcase) {
+    let idleTimer = null;
+    let autoScrollTween = null;
+
+    const cancelAutoScroll = () => {
+      if (autoScrollTween) { autoScrollTween.kill(); autoScrollTween = null; }
+    };
+    const clearIdleTimer = () => { clearTimeout(idleTimer); idleTimer = null; };
+    const stopAutoScroll = () => { clearIdleTimer(); cancelAutoScroll(); };
+
+    const scheduleAutoScroll = () => {
+      if (reduceMotion) return;
+      clearIdleTimer();
+      idleTimer = setTimeout(() => {
+        const target = showcase.scrollWidth - showcase.clientWidth;
+        const remaining = target - showcase.scrollLeft;
+        if (remaining <= 4) return;
+        if (window.gsap) {
+          autoScrollTween = gsap.to(showcase, {
+            scrollLeft: target,
+            duration: Math.min(4.5, Math.max(1.4, remaining / 200)),
+            ease: 'power1.inOut'
+          });
+        } else {
+          showcase.scrollTo({ left: target, behavior: 'smooth' });
+        }
+      }, 3000);
+    };
+
+    // Desktop mouse click-drag to scroll horizontally.
+    if (window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
+      let isDragging = false, startX = 0, startScroll = 0;
+      showcase.addEventListener('pointerdown', (e) => {
+        if (e.pointerType !== 'mouse') return;
+        isDragging = true;
+        showcase.classList.add('is-dragging');
+        startX = e.clientX;
+        startScroll = showcase.scrollLeft;
+        showcase.setPointerCapture(e.pointerId);
+        stopAutoScroll();
+      });
+      showcase.addEventListener('pointermove', (e) => {
+        if (!isDragging) return;
+        showcase.scrollLeft = startScroll - (e.clientX - startX);
+      });
+      const endDrag = () => { isDragging = false; showcase.classList.remove('is-dragging'); };
+      showcase.addEventListener('pointerup', endDrag);
+      showcase.addEventListener('pointercancel', endDrag);
+
+      showcase.addEventListener('mouseenter', scheduleAutoScroll);
+      showcase.addEventListener('mouseleave', stopAutoScroll);
+    }
+
+    showcase.addEventListener('wheel', stopAutoScroll, { passive: true });
+    showcase.addEventListener('touchstart', stopAutoScroll, { passive: true });
   }
 
   /* ============================================
